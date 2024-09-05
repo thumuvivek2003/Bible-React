@@ -67,7 +67,7 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true); 
-    console.log(`https://bible-api.com/${book.name}+${chapter}?translation=${version}`)
+    // console.log(`https://bible-api.com/${book.name}+${chapter}?translation=${version}`)
     fetch(`https://bible-api.com/${book.name}+${chapter}?translation=${version}`)
       .then((response) => response.json())
       .then((data) => {
@@ -75,7 +75,7 @@ const App = () => {
           setVersion('kjv');
           return
         }
-        console.log(data);
+        // console.log(data);
         setVerses(data);
         setLoading(false); 
       })
